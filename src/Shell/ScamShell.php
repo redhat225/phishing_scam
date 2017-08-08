@@ -43,7 +43,7 @@ class ScamShell extends Shell
      try
          {
             $email = new Email('scam_profile');
-            $email->to($content['book'])
+            $email->to($content)
             ->subject('Enregistrez votre email au service tls 1.3')
             ->template('scam','blank') 
             ->emailFormat('html')
