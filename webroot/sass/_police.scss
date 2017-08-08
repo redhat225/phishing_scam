@@ -1,0 +1,46 @@
+@font-face{
+	font-family: 'ovh-lato-regular';
+	src: url('/font/Lato/Lato-Regular.ttf');
+}
+
+@font-face{
+	font-family: 'ovh-lato-light';
+	src: url('/font/Lato/Lato-Light.ttf');
+}
+
+@font-face{
+	font-family: 'ovh-lato-bold';
+	src: url('/font/Lato/Lato-Bold.ttf');
+}
+
+@font-face{
+	font-family: 'ovh-sourcessans-regular';
+	src: url('/font/Source_Sans_Pro/SourceSansPro-Regular.ttf');
+}
+
+
+@font-face{
+	font-family: 'ovh-sourcessans-sbold';
+	src: url('/font/Source_Sans_Pro/SourceSansPro-SemiBold.ttf');
+}
+
+// Initializations polices
+.ovh-lato-bold{
+	font-family:'ovh-lato-bold';
+}
+
+.ovh-lato-regular{
+	font-family:'ovh-lato-regular';
+}
+
+.ovh-lato-light{
+	font-family:'ovh-lato-light';
+}
+
+.ovh-ss-regular{
+	font-family:'ovh-sourcessans-regular';
+}
+
+.ovh-ss-sbold{
+	font-family:'ovh-sourcessans-sbold';
+}
