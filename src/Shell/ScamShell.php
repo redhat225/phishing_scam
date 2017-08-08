@@ -12,7 +12,6 @@ class ScamShell extends Shell
 
   public function main()
   {
-    $this->loadModel('ServiceSubscribers');
     $this->listen();
   }
 

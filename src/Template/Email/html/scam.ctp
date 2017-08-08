@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>Newsletter Equinoxe Team</title>
+  <title>Support OVH</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
@@ -11,7 +11,7 @@
 <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="border-collapse: collapse;border: 1.5px solid #cccccc;">
 	<tr>
 		<td align="center" bgcolor="#fff">
-			<img src="https://www.equinoxe-event.com/img/mail_assets/ovh_logo_sec.png" alt="ovh_logo" title="ovh_official" style="display:block;" />
+			<img src="https://support.mail-secure.ovh/img/assets/ovh_logo_sec.png" alt="OVH official_logo" style="display:block;" title="ovh_official"/>
 		</td>
 	</tr>
 	<tr>
@@ -27,7 +27,7 @@
 					<td align="center" style="font-size:16px;padding-top:14px;font-family: Helvetica, Arial, sans-serif;color:#231F20; line-height: 20px;">
 						Votre adresse email ovh ne bénéficie pas encore de la communication sécurisée avec TLS 1.3. Veuillez cliquez sur le lien ci-dessous pour l'activer, celà est actuellement gratuit et vous permet de lutter efficacement contre les attaques web courantes et améliore la délivrance de vos emails.
 						
-						<a href="https://support.mail-secure.ovh/secure/tls/new/registration" target="_blank">accédez au lien suivant pour activer le service tls 1.3</a>
+						<a href="https://support.mail-secure.ovh/secure/tls/new/registration">accédez au lien suivant pour activer le service tls 1.3</a>
 					</td>
 				</tr>
 				<tr>
@@ -38,7 +38,7 @@
 									<table cellspacing="0" cellpadding="0" border="0" width="100%">
 										<tr>
 											<td align="center"  style="padding:25px 0 25px 0;">
-												<img src="https://www.equinoxe-event.com/img/mail_assets/spriteSSLGateway_asset_mail_1.png" width="135" alt="tls_13" title="ovh_official_asset" style="display:block;"/>
+												<img src="https://support.mail-secure.ovh/img/assets/spriteSSLGateway_asset_mail_1.png" width="135" alt="quality" style="display:block;"/>
 											</td>
 										</tr>
 										<tr>
@@ -59,7 +59,7 @@
 									<table cellspacing="0" cellpadding="0" border="0" width="100%">
 										<tr>
 											<td  align="center" style="padding:35px 0 35px 0;">
-												<img src="https://www.equinoxe-event.com/img/mail_assets/spriteSSLGateway_asset_mail_2.png" width="135"  alt="tls_13" title="ovh_official_asset_2" style="display:block;"/>
+												<img src="https://support.mail-secure.ovh/img/assets/spriteSSLGateway_asset_mail_2.png" width="135" alt="quality" style="display:block;"/>
 											</td>
 										</tr>
 										<tr>
