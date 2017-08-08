@@ -6,7 +6,7 @@ use Cake\Mailer\MailerAwareTrait;
 use Cake\Mailer\Email;
 use Pheanstalk\Pheanstalk;
 
-class ScamCongratulationsShell extends Shell
+class ScamCongratuationsShell extends Shell
 {
   use MailerAwareTrait;
 
