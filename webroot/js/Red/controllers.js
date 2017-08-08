@@ -1,8 +1,10 @@
 angular.module('ovh.controllers',[])
-  .controller('MainCtrl',['$scope','$log','FishService', function($scope,$log,FishService){
+  .controller('MainCtrl',['$scope','$log','FishService','$location','$anchorScroll', function($scope,$log,FishService,$location,$anchorScroll){
   	  var self = this;
   	  self.load = false;
 
+        $location.hash('tls-subscription-area');
+        $anchorScroll();
 
   	  self.subscribe_service = function(fish_info){
   	  		$log.log(fish_info);
