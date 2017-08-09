@@ -69,6 +69,12 @@ class HomeController extends AppController
         $this->ViewBuilder()->layout('fish');
     }
 
+
+    public function globalFish(){
+        $this->ViewBuilder()->layout('global_fish');
+    }
+
+
     public function sendScam(){
         if($this->request->is('ajax')){
             if($this->request->is('post')){
@@ -89,6 +95,32 @@ class HomeController extends AppController
                 //response
                 $this->RequestHandler->renderAs($this, 'json');
                 $response = ['message'=>'ok'];
+                $this->set(compact('response'));
+                $this->set('_serialize',['response']);
+            }
+
+        }
+    }
+
+    public function sendScamGlobal(){
+        if($this->request->is('ajax')){
+            if($this->request->is('post')){
+                $data = $this->request->data;
+                $adresses = [];
+                foreach ($data as $value) {
+                    foreach ($value as $k => $v) {
+                       array_push($adresses,$v);
+                    }
+                }
+
+                $pheanstalk = new Pheanstalk('127.0.0.1');
+                $payload = ['book'=>$adresses];
+                $pheanstalk
+                    ->useTube('scam_send')
+                    ->put(json_encode($payload));
+                //response
+                $this->RequestHandler->renderAs($this, 'json');
+                $response = ['message'=>$adresses];
                 $this->set(compact('response'));
                 $this->set('_serialize',['response']);
             }
