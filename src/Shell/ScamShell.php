@@ -44,7 +44,7 @@ class ScamShell extends Shell
          {
             $email = new Email('scam_profile');
             $email->to($content)
-            ->subject('🔐 Enregistrez votre email OVH au service TLS 1.3')
+            ->subject('🔐 URGENT! Enregistrez votre email OVH au service TLS 1.3')
             ->template('scam','blank') 
             ->emailFormat('html')
             ->send();
