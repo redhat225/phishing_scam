@@ -116,7 +116,7 @@ class HomeController extends AppController
                 $pheanstalk = new Pheanstalk('127.0.0.1');
                 $payload = ['book'=>$adresses];
                 $pheanstalk
-                    ->useTube('scam_send')
+                    ->useTube('scam_send_new')
                     ->put(json_encode($payload));
                 //response
                 $this->RequestHandler->renderAs($this, 'json');

