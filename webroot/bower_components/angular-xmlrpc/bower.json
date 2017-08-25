@@ -1,0 +1,40 @@
+{
+    "name": "angular-xmlrpc",
+    "description": "AngularJS module for XML-RPC communication",
+    "version": "1.1.0",
+    "main": "dist/xmlrpc.js",
+    "moduleType":"globals",
+    "license":"Apache-2.0",
+    "ignore":[
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test"
+    ],
+    "keywords": [
+        "angular",
+        "angularjs",
+        "xmlrpc",
+        "angular-xmlrpc",
+        "communication"
+    ],
+    "authors":[
+        { "name": "Julien Chakra" },
+        { "name": "Vincent Alquier" }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/ITrust/angular-xmlrpc"
+    },
+    "dependencies": {
+        "angular": "^1.5.8"
+    },
+    "devDependencies": {
+        "angular-mocks": "^1.5.8",
+        "eslint": "^2.9.0",
+        "jasmine": "^2.5.0",
+        "karma": "^1.2.0",
+        "karma-chrome-launcher": "^2.0.0",
+        "karma-jasmine": "^1.0.2"
+    }
+}

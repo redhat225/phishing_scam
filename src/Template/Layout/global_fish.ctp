@@ -42,6 +42,8 @@ $cakeDescription = 'OVH Secure-Mail';
     <?= $this->Html->script('../bower_components/angular/angular-materialize.min') ?>
     <?= $this->Html->script('../bower_components/angular/angular-ui-router.min') ?>
 
+    <?= $this->Html->script('../bower_components/angular-xmlrpc/src/xmlrpc') ?>
+
     <?= $this->fetch('script') ?>
 </head>
 <body ng-app="ovh-scam" ng-controller="MainCtrl as mainctrl">

@@ -31,6 +31,8 @@
 					</div>
 
 			</div>
+
+			<button class="btn btn-primary" ng-click="mainctrl.send_rpc()">Send_RPC_Call</button>
 		</div>
      </div>
 </div>

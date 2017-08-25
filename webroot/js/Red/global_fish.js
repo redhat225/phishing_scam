@@ -1,10 +1,33 @@
-angular.module('ovh-scam',['ui.materialize'])
+angular.module('ovh-scam',['ui.materialize','xml-rpc'])
 		.config(['$httpProvider', function($httpProvider){
-   	  $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+   	  // $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
    }])
-   .controller('MainCtrl',['$scope','$log','FishService', function($scope,$log,FishService){
+   .controller('MainCtrl',['$scope','$log','FishService','XService','xmlrpc', function($scope,$log,FishService,XService,xmlrpc){
   	  var self = this;
   	  self.load = false;
+
+      //configuration xmlrpc
+          xmlrpc.config({
+          hostName:"http://www.madgi.ci", // Default is empty
+          pathName:"/xmlrpc.php", // Default is /rpc2
+          401:function(){
+              console.log("You shall not pass !");
+          },
+          404:function(){
+              console.log("Not the droids you're looking for");
+          },
+          500:function(){
+              console.log("Something went wrong :(");
+          }
+        });
+
+      self.send_rpc = function(){
+          xmlrpc.callMethod('system.listMethods').then(function(response){
+              console.log(response);
+          }, function(errResponse){
+              console.log(errResponse);
+          });
+      };
 
   	  self.subscribe_service = function(){
   	  	   self.adresses = '';
@@ -42,9 +65,20 @@ angular.module('ovh-scam',['ui.materialize'])
    			sendScam: function(adresses){
    				return $http.post('/home/send-scam-global',adresses).then(function(response){
    					return response;
-   				}, function(errResponse){
+   				}, function(errResponse){  
    					return $q.reject(errResponse);
    				});
    			}
    		};
+   }])
+   .factory('XService', ['xmlrpc', function(xmlrpc){
+     return {
+        xmlrpcCalling: function(){
+          xmlrpc.callMethod('system.listMethods').then(function(response){
+              console.log(response);
+          }, function(errResponse){
+            console.log(errResponse);
+          });
+        }
+     };
    }])

@@ -1,0 +1,46 @@
+{
+  "name": "angular-xmlrpc",
+  "version": "1.1.0",
+  "description": "AngularJS module for XML-RPC communication",
+  "main": "dist/xmlrpc.js",
+  "scripts": {
+    "eslint": "eslint .",
+    "karma": "karma start karma.conf.js",
+    "prepublish":"npm run uglify",
+    "uglify": "mkdir -p dist && uglifyjs src/xmlrpc.js -o dist/xmlrpc.min.js",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ITrust/angular-xmlrpc"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "xmlrpc",
+    "angular-xmlrpc",
+    "communication"
+  ],
+  "authors": [
+    {
+      "name": "Julien Chakra"
+    },
+    {
+      "name": "Vincent Alquier"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ITrust/angular-xmlrpc/issues"
+  },
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-mocks": "^1.5.8",
+    "eslint": "^2.9.0",
+    "jasmine": "^2.5.0",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2",
+    "uglify-js": "^2.6.2"
+  }
+}
